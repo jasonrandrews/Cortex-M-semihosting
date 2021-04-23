@@ -1,0 +1,2 @@
+FROM jasonrandrews/fastmodels-compilers:ubuntu
+ENV DEBIAN_FRONTEND=noninteractive

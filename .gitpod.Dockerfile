@@ -1,4 +1,4 @@
-FROM jasonrandrews/fastmodels-compilers:gitpod
+FROM jasonrandrews/fastmodels-compilers:gp
 
 # Install custom tools, runtimes, etc.
 # For example "bastet", a command-line tetris clone:

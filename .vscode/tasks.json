@@ -1,0 +1,23 @@
+{
+"version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Debug",
+            "type": "build",
+            "command": "${workspaceFolder}/system/Linux64-Release-GCC-7.3/isim_system",
+            "args": [
+                "${workspaceFolder}/software-gcc/hello.axf"
+            ]
+        },
+        {
+            "type": "deploy",
+            "label": "Cortex-M semihosting",
+            "command": "${workspaceFolder}/system/Linux64-Release-GCC-7.3/isim_system",
+            "args": [
+                "-a ${workspaceFolder}/software-gcc/hello.axf"
+            ],
+            "problemMatcher": []
+        }
+    ]
+}
+

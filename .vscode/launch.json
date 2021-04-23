@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Cortex-M semihosting",
+            "type": "gdb-debug",
+            "request": "launch",
+            "runToMain": false,
+            "program": "${workspaceFolder}/softare-AC6/hello.axf",
+            "gdbServerPort": "<port:31627>",
+            "gdbServer": "${workspaceFolder}/system/Linux64-Release-GCC-7.3/isim_system",
+            "gdbServerArguments": [
+                "--allow-debug-plugin",
+                "--plugin",
+                "$HOME/GDBRemoteConnection.so"
+            ],
+            "launchRegex": "GDBServer: Listening"
+        }
+    ]
+}
+
