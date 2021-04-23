@@ -6,13 +6,15 @@
             "type": "gdb-debug",
             "request": "launch",
             "runToMain": false,
-            "program": "${workspaceFolder}/softare-AC6/hello.axf",
+            "program": "${workspaceFolder}/software-AC6/hello.axf",
             "gdbServerPort": "<port:31627>",
             "gdbServer": "${workspaceFolder}/system/Linux64-Release-GCC-7.3/isim_system",
             "gdbServerArguments": [
+                "-f",
+                "${workspaceFolder}/params.txt",
                 "--allow-debug-plugin",
                 "--plugin",
-                "$HOME/GDBRemoteConnection.so"
+                "${env:HOME}/GDBRemoteConnection.so"
             ],
             "launchRegex": "GDBServer: Listening"
         }
