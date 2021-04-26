@@ -2,6 +2,45 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "(gdb) C++ gdb",
+            "type": "cppdbg",
+            "request": "launch",
+            "targetArchitecture": "arm",
+            "cwd": "${workspaceFolder}",
+            "program": "${workspaceFolder}/software-gcc/hello.axf",
+            "MIMode": "gdb",
+            "miDebuggerPath": "arm-none-eabi-gdb",
+            "debugServerPath": "${workspaceFolder}/run-gdb.sh",
+            "setupCommands": [
+                {
+                    "text": "set remote kill-packet off",
+                },
+                {
+                    "text": "target remote :31627",
+                },
+                {
+                    "text": "file ${workspaceRoot}/software-gcc/hello.axf", "description": "load file", "ignoreFailures": false
+                },
+                {
+                    "text": "load",
+                },
+                {
+                    "text": "b main",
+                }
+            ],
+            "launchCompleteCommand": "None",
+            "externalConsole": true,
+            "filterStderr": true,
+            "filterStdout": true,
+            "logging": {
+                "moduleLoad": true,
+                "trace": true,
+                "engineLogging": true,
+                "programOutput": true,
+                "exceptions": false
+            },
+        },
+        {
             "name": "Cortex-M semihosting",
             "type": "gdb-debug",
             "request": "launch",
