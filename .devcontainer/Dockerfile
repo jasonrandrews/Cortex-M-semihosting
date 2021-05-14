@@ -1,2 +1,2 @@
-FROM jasonrandrews/fastmodels-compilers:ubuntu
+FROM armswdev/arm-tools:fastmodels-compilers
 ENV DEBIAN_FRONTEND=noninteractive
