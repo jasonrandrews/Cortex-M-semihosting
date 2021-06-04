@@ -1,7 +1,11 @@
 #!/bin/bash
 
+SYS=Cortex-M7 
+
 # Find subdirectory under 'system' folder, which is the compiler used to generate the virtual platform.
-BuildDir=$(ls -d system/* | grep Lin)
+BuildDir=$(ls -d system/$SYS/* | grep Lin)
+
+echo $BuildDir
 
 PLUGINS=$PVLIB_HOME/plugins/Linux64_GCC-7.3
 
@@ -31,7 +35,7 @@ fi
 
 echo "Running fast model simulation"
 
-./$BuildDir/isim_system -a ./software-gcc/hello.axf \
+./$BuildDir/isim_system -a ./software/$SYS/AC6/hello.axf \
 $TMAC \
 $CT \
 $DEBUG \
