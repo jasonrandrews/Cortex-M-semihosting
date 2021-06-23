@@ -1,2 +1,2 @@
-FROM armswdev/arm-tools:gitpod-compilers-fastmodels
+FROM armswdev/arm-tools:compilers-fastmodels-gitpod
 
