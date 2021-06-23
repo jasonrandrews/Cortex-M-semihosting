@@ -7,10 +7,10 @@
             "request": "launch",
             "targetArchitecture": "arm",
             "cwd": "${workspaceFolder}",
-            "program": "${workspaceFolder}/software-gcc/hello.axf",
+            "program": "${workspaceFolder}/software/Cortex-M7/gcc/hello.axf",
             "MIMode": "gdb",
             "miDebuggerPath": "arm-none-eabi-gdb",
-            "debugServerPath": "${workspaceFolder}/run-gdb.sh",
+            "debugServerPath": "${workspaceFolder}/gdb-m7.sh",
             "setupCommands": [
                 {
                     "text": "set remote kill-packet off",
@@ -19,7 +19,7 @@
                     "text": "target remote :31627",
                 },
                 {
-                    "text": "file ${workspaceRoot}/software-gcc/hello.axf", "description": "load file", "ignoreFailures": false
+                    "text": "file ${workspaceRoot}/software/Cortex-M7/gcc/hello.axf", "description": "load file", "ignoreFailures": false
                 },
                 {
                     "text": "load",
@@ -45,9 +45,9 @@
             "type": "gdb-debug",
             "request": "launch",
             "runToMain": false,
-            "program": "${workspaceFolder}/software-AC6/hello.axf",
+            "program": "${workspaceFolder}/software/Cortex-M7/gcc/hello.axf",
             "gdbServerPort": "<port:31627>",
-            "gdbServer": "${workspaceFolder}/system/Linux64-Release-GCC-7.3/isim_system",
+            "gdbServer": "${workspaceFolder}/system/Cortex-M7/Linux64-Release-GCC-7.3/isim_system",
             "gdbServerArguments": [
                 "-f",
                 "${workspaceFolder}/params.txt",
